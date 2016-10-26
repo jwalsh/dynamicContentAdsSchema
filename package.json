@@ -1,0 +1,33 @@
+{
+  "name": "dynamic-content-ads-schema",
+  "version": "0.0.0",
+  "description": "Validate ad payloads against 2016-11 specification",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node src/index.js",
+    "test": "'./node_modules/.bin/babel-node test/index.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwalsh/dynamicContentAdsSchema.git"
+  },
+  "keywords": [
+    "iab",
+    "ads",
+    "tools",
+    "schema"
+  ],
+  "author": "Jason Walsh <j@wal.sh>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwalsh/dynamicContentAdsSchema/issues"
+  },
+  "homepage": "https://github.com/jwalsh/dynamicContentAdsSchema#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0"
+  }
+}
