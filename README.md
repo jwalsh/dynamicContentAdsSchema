@@ -28,3 +28,9 @@ Senior Director of Product and R&D
 IAB Technology Lab  
 [shailley@iabtechlab.com](mailto:shailley@iabtechlab.com)
 
+# Testing 
+
+```
+yarn 
+npm test
+```

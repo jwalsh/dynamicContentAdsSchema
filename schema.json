@@ -1,160 +1,162 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "properties": {
-        "ad": {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Dynamic Content Ads",
+  "description": "A structured system of meta-data for creative components and asset variations of the creative components that may be used in an advertisement.",
+  "required": [
+    "ad"
+  ],
+  "type": "object",
+  "properties": {
+    "ad": {
+      "properties": {
+        "adUnits": {
+          "items": {
             "properties": {
-                "adUnits": {
-                    "items": {
-                        "properties": {
-                            "id": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "size": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "name"
-                        ],
-                        "type": "object"
-                    },
-                    "type": "array"
-                },
-                "advertiser": {
-                    "type": "string"
-                },
-                "assetGroups": {
-                    "items": {
-                        "properties": {
-                            "id": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "name"
-                        ],
-                        "type": "object"
-                    },
-                    "type": "array"
-                },
-                "creativeComponents": {
-                    "items": {
-                        "properties": {
-                            "adUnit": {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            },
-                            "assetType": {
-                                "enum": [
-                                    "html",
-                                    "javascript",
-                                    "css",
-                                    "image",
-                                    "animatedImage",
-                                    "media",
-                                    "svgImage",
-                                    "webGl",
-                                    "dataFeed",
-                                    "assetFeed",
-                                    "Text",
-                                    "Fonts",
-                                    "Uri",
-                                    "custom"
-                                ]
-                            },
-                            "assets": {
-                                "items": {
-                                    "properties": {
-                                        "assetGroupIds": {
-                                            "items": {
-                                                "type": "string"
-                                            },
-                                            "type": "array"
-                                        },
-                                        "attributes": {
-                                            "type": "object"
-                                        },
-                                        "fallback": {
-                                            "type": "string"
-                                        },
-                                        "id": {
-                                            "type": "string"
-                                        },
-                                        "name": {
-                                            "type": "string"
-                                        },
-                                        "source": {
-                                            "type": "string"
-                                        },
-                                        "sourceType": {
-                                            "type": "string"
-                                        },
-                                        "target": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "required": [
-                                        "id",
-                                        "name",
-                                        "source",
-                                        "sourceType",
-                                        "fallback"
-                                    ],
-                                    "type": "object"
-                                },
-                                "type": "array"
-                            },
-                            "componentType": {
-                                "type": "string"
-                            },
-                            "id": {
-                                "type": "integer"
-                            },
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "id",
-                            "name",
-                            "assetType",
-                            "componentType",
-                            "adUnit",
-                            "assets"
-                        ],
-                        "type": "object"
-                    },
-                    "type": "array"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "string"
-                }
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              }
             },
             "required": [
-                "id",
-                "name",
-                "advertiser",
-                "adUnits",
-                "creativeComponents"
+              "id",
+              "name"
             ],
             "type": "object"
+          },
+          "type": "array"
+        },
+        "advertiser": {
+          "type": "string"
+        },
+        "assetGroups": {
+          "items": {
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "creativeComponents": {
+          "items": {
+            "properties": {
+              "adUnit": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "assetType": {
+                "enum": [
+                  "html",
+                  "javascript",
+                  "css",
+                  "image",
+                  "animatedImage",
+                  "media",
+                  "svgImage",
+                  "webGl",
+                  "dataFeed",
+                  "assetFeed",
+                  "Text",
+                  "Fonts",
+                  "Uri",
+                  "custom"
+                ]
+              },
+              "assets": {
+                "items": {
+                  "properties": {
+                    "assetGroupIds": {
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "attributes": {
+                      "type": "object"
+                    },
+                    "fallback": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "sourceType": {
+                      "type": "string"
+                    },
+                    "target": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name",
+                    "source",
+                    "sourceType",
+                    "fallback"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "componentType": {
+                "type": "string"
+              },
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "assetType",
+              "componentType",
+              "adUnit",
+              "assets"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
         }
-    },
-    "required": [
-        "ad"
-    ],
-    "type": "object"
+      },
+      "required": [
+        "id",
+        "name",
+        "advertiser",
+        "adUnits",
+        "creativeComponents"
+      ],
+      "type": "object"
+    }
+  }
 }
